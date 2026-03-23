@@ -1,0 +1,51 @@
+@import 'tailwindcss';
+
+/* Class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ─── Design Tokens ───────────────────────────────────────── */
+@theme {
+  /* Brand */
+  --color-brand: #E63946;
+  --color-brand-dark: #c62f3a;
+
+  /* Neutrals */
+  --color-canvas: #F9F7F2;
+  --color-surface: #FFFFFF;
+  --color-border: #E8E5DF;
+  --color-text: #1C1917;
+  --color-muted: #6B7280;
+
+  /* Typography */
+  --font-sans: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Outfit', 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+
+  /* Shadows */
+  --shadow-card: 0 4px 32px rgba(28, 25, 23, 0.07);
+  --shadow-card-hover: 0 12px 48px rgba(28, 25, 23, 0.12);
+}
+
+/* ─── Base ────────────────────────────────────────────────── */
+@layer base {
+  html {
+    @apply scroll-smooth antialiased;
+  }
+
+  body {
+    @apply min-h-[100dvh] bg-[#F9F7F2] font-sans text-[#1C1917];
+    @apply transition-colors duration-300;
+  }
+
+  .dark body {
+    @apply bg-[#111010] text-slate-100;
+  }
+
+  #root {
+    @apply min-h-[100dvh];
+  }
+
+  /* Focus ring */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand ring-offset-2;
+  }
+}
