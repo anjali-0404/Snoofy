@@ -3,7 +3,6 @@
 A clean, modern, and responsive frontend built using **React + TypeScript + Tailwind CSS**, focused on delivering a smooth and visually appealing user experience.
 
 ---
-
 ## ✨ Overview
 
 **Snoofy** is designed as a minimal, aesthetic web interface that leverages structured UI components, reusable logic, and optimized asset handling.
